@@ -1,20 +1,22 @@
-import { PropsWithChildren, createContext, useState } from 'react'
-import getSystemTheme from '../utils/getSystemTheme';
+import { PropsWithChildren, createContext, useState } from "react";
+import getSystemTheme from "../utils/getSystemTheme";
 
-export type Theme = 'light' | 'dark'
+export type Theme = "light" | "dark";
 
 export interface ThemeCtx {
-    theme: Theme,
-    setTheme: (t: Theme) => void;
+  theme: Theme;
+  setTheme: (t: Theme) => void;
 }
 
-export const themeCtx = createContext<ThemeCtx | null>(null)
+export const themeCtx = createContext<ThemeCtx | null>(null);
 
-const ThemeProvider = ({children}: PropsWithChildren): JSX.Element => {
-const [theme, setTheme] = useState<Theme>(getSystemTheme())
+const ThemeProvider = ({ children }: PropsWithChildren): JSX.Element => {
+  const [theme, setTheme] = useState<Theme>(getSystemTheme());
 
   return (
-    <themeCtx.Provider value={{theme, setTheme}}>{children}</themeCtx.Provider>
+    <themeCtx.Provider value={{ theme, setTheme }}>
+      {children}
+    </themeCtx.Provider>
   );
 };
 

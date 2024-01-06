@@ -1,8 +1,8 @@
-import { PropsWithChildren } from 'react'
-import styles from './Button.module.css'
+import { PropsWithChildren } from "react";
+import styles from "./Button.module.css";
 
 interface Props {
-    onClick: () => void;
+  onClick: () => void;
 }
 
 const Button = (props: PropsWithChildren<Props>): JSX.Element => {
