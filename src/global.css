@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+}
+
+:root {
+    --background: white;
+    --text: black;
+  }
+
+  
+  [data-theme='dark'] {
+    --background: black;
+    --text: white;
+  }
