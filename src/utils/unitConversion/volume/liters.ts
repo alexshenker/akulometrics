@@ -1,6 +1,6 @@
 import { Volume } from "./type";
 
-const liter = (units: number) => ({
+const liters = (units: number) => ({
   to: (to: Volume) => {
     switch (to) {
       case "mL":
@@ -23,4 +23,4 @@ const liter = (units: number) => ({
   },
 });
 
-export default liter;
+export default liters;

@@ -1,6 +1,6 @@
 import { Volume } from "./type";
 
-const floridOunce = (units: number) => ({
+const milliliters = (units: number) => ({
   to: (to: Volume) => {
     switch (to) {
       case "mL":
@@ -23,4 +23,4 @@ const floridOunce = (units: number) => ({
   },
 });
 
-export default floridOunce;
+export default milliliters;

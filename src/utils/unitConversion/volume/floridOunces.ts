@@ -1,20 +1,20 @@
 import { Volume } from "./type";
 
-const gallon = (units: number) => ({
+const floridOunces = (units: number) => ({
   to: (to: Volume) => {
     switch (to) {
       case "mL":
-        return units * 3785.41;
-      case "L":
-        return units * 3.78541;
-      case "fl oz":
-        return units * 128;
-      case "pt":
-        return units * 8;
-      case "qt":
-        return units * 4;
-      case "gal":
         return units;
+      case "L":
+        return units / 1000;
+      case "fl oz":
+        return units / 29.5735;
+      case "pt":
+        return units / 473.176;
+      case "qt":
+        return units / 946.353;
+      case "gal":
+        return units / 3785.41;
       default: {
         const x: never = to;
         throw new Error(`Unexpected value ${x}`);
@@ -23,4 +23,4 @@ const gallon = (units: number) => ({
   },
 });
 
-export default gallon;
+export default floridOunces;

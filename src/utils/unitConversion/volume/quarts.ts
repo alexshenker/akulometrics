@@ -1,20 +1,20 @@
 import { Volume } from "./type";
 
-const milliliter = (units: number) => ({
+const quarts = (units: number) => ({
   to: (to: Volume) => {
     switch (to) {
       case "mL":
-        return units;
+        return units * 946.353;
       case "L":
-        return units / 1000;
+        return units * 0.946353;
       case "fl oz":
-        return units / 29.5735;
+        return units * 32;
       case "pt":
-        return units / 473.176;
+        return units * 2;
       case "qt":
-        return units / 946.353;
+        return units;
       case "gal":
-        return units / 3785.41;
+        return units / 4;
       default: {
         const x: never = to;
         throw new Error(`Unexpected value ${x}`);
@@ -23,4 +23,4 @@ const milliliter = (units: number) => ({
   },
 });
 
-export default milliliter;
+export default quarts;
