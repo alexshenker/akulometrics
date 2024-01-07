@@ -1,7 +1,7 @@
 import style from "./App.module.css";
-
 import Header from "./components/Header/Header";
 import useTheme from "./utils/hooks/useTheme";
+import Converter from "./components/Converter/Converter";
 import "./global.css";
 
 const App = (): JSX.Element => {
@@ -10,6 +10,8 @@ const App = (): JSX.Element => {
   return (
     <div className={style.app} data-theme={t.theme}>
       <Header />
+
+      <Converter />
     </div>
   );
 };

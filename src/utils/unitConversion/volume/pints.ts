@@ -1,6 +1,7 @@
+import { Converter } from "../convert";
 import { Volume } from "./type";
 
-const pints = (units: number) => ({
+const pints: Converter<Volume> = (units: number) => ({
   to: (to: Volume) => {
     switch (to) {
       case "mL":

@@ -1,28 +1,25 @@
-:root {
-  --border-dropdown: 1px solid var(--border);
-  --border-radius: 4px;
-}
-
 .container {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  max-width: 150px;
+  max-width: var(--input-max-width);
 }
 
 .head {
   cursor: pointer;
   padding: 5px;
-  border: var(--border-dropdown);
-  border-radius: var(--border-radius);
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  background-color: var(--surface);
 }
 
 .menu {
   position: absolute;
   box-sizing: border-box;
-  border: var(--border-dropdown);
+  border: var(--input-border);
   width: 100%;
-  border-radius: var(--border-radius);
+  border-radius: var(--input-border-radius);
+  background-color: var(--surface);
 }
 
 .option {

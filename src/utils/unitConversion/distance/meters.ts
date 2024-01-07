@@ -1,7 +1,8 @@
+import { Converter } from "../convert";
 import { Distance } from "./type";
 
-const meters = (units: number) => ({
-  to: (to: Distance) => {
+const meters: Converter<Distance> = (units) => ({
+  to: (to) => {
     switch (to) {
       case "mm":
         return units * 1000;

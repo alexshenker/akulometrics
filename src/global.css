@@ -2,9 +2,15 @@
 :root {
   --z-100: #f4f4f5;
   --z-200: #d4d4d8;
+  --z-300: #a1a1aa;
   --z-neutral: #71717a;
-  --z-400: #3f3f46;
-  --z-500: #171717;
+  --z-400: #52525b;
+  --z-500: #3f3f46;
+  --z-600: #171717;
+
+  --input-border: 1px solid var(--border);
+  --input-max-width: 150px;
+  --input-border-radius: 4px;
 }
 
 /* Unchanging */
@@ -15,18 +21,21 @@
 /* Light-theme */
 :root {
   --background: var(--z-100);
-  --text: var(--z-500);
-  --icon: var(--z-500);
-  --highlight: var(--z-200);
+  --text: var(--z-600);
+  --icon: var(--z-600);
+  --surface: var(--z-200);
+  --highlight: var(--z-300);
 }
 
 [data-theme="dark"] {
-  --background: var(--z-500);
+  --background: var(--z-600);
   --text: var(--z-100);
   --icon: var(--z-100);
+  --surface: var(--z-500);
   --highlight: var(--z-400);
 }
 
 body {
   margin: 0;
+  font-size: 18px;
 }

@@ -1,6 +1,7 @@
+import { Converter } from "../convert";
 import { Mass } from "./type";
 
-const pounds = (units: number) => ({
+const pounds: Converter<Mass> = (units: number) => ({
   to: (to: Mass) => {
     switch (to) {
       case "mg":

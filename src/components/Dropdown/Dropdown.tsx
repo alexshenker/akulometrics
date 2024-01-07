@@ -33,8 +33,12 @@ const Dropdown = <T extends Option>(props: Props<T>): JSX.Element => {
             {props.options.map((o) => {
               return (
                 <div
+                  key={o.label}
                   className={styles.option}
-                  onClick={() => props.onChange(o)}
+                  onClick={() => {
+                    props.onChange(o);
+                    setShowMenu(false);
+                  }}
                 >
                   {o.label}
                 </div>
