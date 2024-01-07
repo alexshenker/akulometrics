@@ -26,6 +26,10 @@ const Dropdown = <T extends Option>(props: Props<T>): JSX.Element => {
         <>
           <Space height={"3px"} />
           <div className={styles.menu}>
+            {props.options.length === 0 && (
+              <div className={styles.option}>Empty</div>
+            )}
+
             {props.options.map((o) => {
               return (
                 <div

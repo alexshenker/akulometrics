@@ -1,14 +1,30 @@
+/* Palette */
 :root {
-  --background: rgb(217, 221, 224);
-  --text: rgb(10, 10, 10);
-  --border: rgb(146, 146, 146);
-  --highlight: #6d6d6db3;
+  --z-100: #f4f4f5;
+  --z-200: #d4d4d8;
+  --z-neutral: #71717a;
+  --z-400: #3f3f46;
+  --z-500: #171717;
+}
+
+/* Unchanging */
+:root {
+  --border: var(--z-neutral);
+}
+
+/* Light-theme */
+:root {
+  --background: var(--z-100);
+  --text: var(--z-500);
+  --icon: var(--z-500);
+  --highlight: var(--z-200);
 }
 
 [data-theme="dark"] {
-  --background: rgb(10, 10, 10);
-  --text: rgb(217, 221, 224);
-  --highlight: #b2b2b258;
+  --background: var(--z-500);
+  --text: var(--z-100);
+  --icon: var(--z-100);
+  --highlight: var(--z-400);
 }
 
 body {
