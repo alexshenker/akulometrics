@@ -1,6 +1,8 @@
 import style from "./App.module.css";
+
 import Header from "./components/Header/Header";
 import useTheme from "./utils/hooks/useTheme";
+import "./global.css";
 
 const App = (): JSX.Element => {
   const t = useTheme();

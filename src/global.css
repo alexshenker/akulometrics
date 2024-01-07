@@ -1,13 +1,16 @@
-body {
-  margin: 0;
-}
-
 :root {
-  --background: white;
-  --text: black;
+  --background: rgb(217, 221, 224);
+  --text: rgb(10, 10, 10);
+  --border: rgb(146, 146, 146);
+  --highlight: #6d6d6db3;
 }
 
 [data-theme="dark"] {
-  --background: black;
-  --text: white;
+  --background: rgb(10, 10, 10);
+  --text: rgb(217, 221, 224);
+  --highlight: #b2b2b258;
+}
+
+body {
+  margin: 0;
 }

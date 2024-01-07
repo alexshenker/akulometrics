@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 250px;
+}
+
+.head {
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.menu {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  width: 100%;
+  border-radius: 4px;
+}
+
+.option {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.option:hover {
+  opacity: 0.6;
+  background-color: var(--highlight);
+}
