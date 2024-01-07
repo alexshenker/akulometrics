@@ -4,9 +4,9 @@ const kilometers = (units: number) => ({
   to: (to: Distance) => {
     switch (to) {
       case "mm":
-        return units * 1000000;
+        return units * (1000 * 1000);
       case "cm":
-        return units * 100000;
+        return units * (100 * 1000);
       case "m":
         return units * 1000;
       case "km":

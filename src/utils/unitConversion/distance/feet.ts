@@ -8,9 +8,9 @@ const feet = (units: number) => ({
       case "cm":
         return units * 30.48;
       case "m":
-        return units * 0.3048;
+        return units / 3.281;
       case "km":
-        return units * 0.0003048;
+        return units / 3281;
       case "in":
         return units * 12;
       case "ft":

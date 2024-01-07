@@ -10,7 +10,7 @@ const millimeters = (units: number) => ({
       case "m":
         return units * 1000;
       case "km":
-        return units * 1000000;
+        return units * (1000 * 1000);
       case "in":
         return units * 25.4;
       case "ft":

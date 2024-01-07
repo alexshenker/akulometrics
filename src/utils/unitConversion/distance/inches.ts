@@ -8,9 +8,9 @@ const inches = (units: number) => ({
       case "cm":
         return units * 2.54;
       case "m":
-        return units * 0.0254;
+        return units / 39.37;
       case "km":
-        return units * 0.0000254;
+        return units / 39370;
       case "in":
         return units;
       case "ft":
