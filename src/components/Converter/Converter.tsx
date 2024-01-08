@@ -8,6 +8,7 @@ import Input from "../Input/Input";
 import unitToLabel from "../../utils/unitConversion/unitToLabel";
 import { UnitType } from "../../utils/unitConversion/types";
 import styles from "./Converter.module.css";
+import toRoundStr from "../../utils/toRoundStr";
 
 interface Props<T extends UnitType> {
   type1: T;
@@ -25,7 +26,7 @@ const Converter = <T extends UnitType>(props: Props<T>): JSX.Element => {
       const numeric = stringToNum(units1);
       return numeric === null
         ? ""
-        : `${props.converter[props.type1](numeric).to(props.type2)}`;
+        : toRoundStr(props.converter[props.type1](numeric).to(props.type2));
     })(),
   );
 
@@ -48,7 +49,9 @@ const Converter = <T extends UnitType>(props: Props<T>): JSX.Element => {
 
       setUnits1(newUnits);
 
-      setUnits2(`${props.converter[props.type1](numeric).to(props.type2)}`);
+      setUnits2(
+        toRoundStr(props.converter[props.type1](numeric).to(props.type2)),
+      );
     },
     [props.converter, props.type1, props.type2],
   );
@@ -67,7 +70,9 @@ const Converter = <T extends UnitType>(props: Props<T>): JSX.Element => {
 
       setUnits2(newUnits);
 
-      setUnits1(`${props.converter[props.type2](numeric).to(props.type1)}`);
+      setUnits1(
+        toRoundStr(props.converter[props.type2](numeric).to(props.type1)),
+      );
     },
     [props.converter, props.type1, props.type2],
   );
@@ -86,7 +91,7 @@ const Converter = <T extends UnitType>(props: Props<T>): JSX.Element => {
         return;
       }
 
-      setUnits2(`${props.converter[newType](numeric).to(props.type2)}`);
+      setUnits2(toRoundStr(props.converter[newType](numeric).to(props.type2)));
     },
     [props, units1],
   );
@@ -105,7 +110,7 @@ const Converter = <T extends UnitType>(props: Props<T>): JSX.Element => {
         return;
       }
 
-      setUnits1(`${props.converter[newType](numeric).to(props.type1)}`);
+      setUnits1(toRoundStr(props.converter[newType](numeric).to(props.type1)));
     },
     [props, units2],
   );
