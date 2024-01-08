@@ -1,4 +1,4 @@
-import style from "./App.module.css";
+import styles from "./App.module.css";
 import Header from "./components/Header/Header";
 import useTheme from "./utils/hooks/useTheme";
 import Converter from "./components/Converter/Converter";
@@ -23,10 +23,10 @@ const App = (): JSX.Element => {
   const [volumeType2, setVolumeType2] = useState<Volume>("gal");
 
   return (
-    <div className={style.app} data-theme={t.theme}>
+    <div className={styles.app} data-theme={t.theme}>
       <Header />
 
-      <Stack gap="20px">
+      <Stack gap="20px" alignItems="center" marginTop="calc(30vh - 100px)">
         <Converter
           type1={distanceType1}
           type2={distanceType2}

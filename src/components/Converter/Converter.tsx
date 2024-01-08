@@ -114,7 +114,7 @@ const Converter = <T extends Distance | Mass | Volume>(
   );
 
   return (
-    <div style={{ width: "300px", margin: "auto" }}>
+    <div style={{ width: "300px" }}>
       <Row justifyContent="space-between" gap="14px">
         <Stack gap="5px">
           <Dropdown

@@ -1,11 +1,6 @@
 import { PropsWithChildren } from "react";
 
-export interface Props {
-  gap?: string;
-  justifyContent?: React.CSSProperties["justifyContent"];
-  flexDirection?: React.CSSProperties["flexDirection"];
-  alignItems?: React.CSSProperties["alignItems"];
-}
+export interface Props extends React.CSSProperties {}
 
 const Row = (props: PropsWithChildren<Props>): JSX.Element => {
   return (

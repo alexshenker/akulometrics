@@ -9,6 +9,11 @@ const Header = (): JSX.Element => {
 
   return (
     <div className={styles.header}>
+      <span>
+        <strong>AkuloMetrics</strong> - by Aleksey Shenker{" | "}
+        <a href="https://github.com/alexshenker/akulometrics">Github</a>
+      </span>
+
       <Button
         onClick={() => t.setTheme(t.theme === "light" ? "dark" : "light")}
       >
