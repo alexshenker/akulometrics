@@ -11,6 +11,9 @@
   border: var(--input-border);
   border-radius: var(--input-border-radius);
   background-color: var(--surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menuContainer {
