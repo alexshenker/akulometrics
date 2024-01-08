@@ -1,8 +1,6 @@
-import { Distance } from "./distance/type";
-import { Mass } from "./mass/type";
-import { Volume } from "./volume/type";
+import { UnitType } from "./types";
 
-const unitToLabel: Record<Distance | Mass | Volume, string> = {
+const unitToLabel: Record<UnitType, string> = {
   mm: "Millimeters",
   cm: "Centimeters",
   m: "Meters",
@@ -23,6 +21,9 @@ const unitToLabel: Record<Distance | Mass | Volume, string> = {
   pt: "Pints",
   qt: "Quarts",
   gal: "Gallons",
+  C: "°Celsius",
+  F: "°Fahrenheit",
+  K: "°Kelvin",
 };
 
 export default unitToLabel;

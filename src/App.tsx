@@ -9,18 +9,25 @@ import convert from "./utils/unitConversion/convert";
 import Stack from "./components/Stack";
 import { Mass, masses } from "./utils/unitConversion/mass/type";
 import { Volume, volumes } from "./utils/unitConversion/volume/type";
+import {
+  Temperature,
+  temperatures,
+} from "./utils/unitConversion/temperature/type";
 
 const App = (): JSX.Element => {
   const t = useTheme();
 
-  const [distanceType1, setDistanceType1] = useState<Distance>("km");
-  const [distanceType2, setDistanceType2] = useState<Distance>("mi");
+  const [distanceType1, setDistanceType1] = useState<Distance>("mi");
+  const [distanceType2, setDistanceType2] = useState<Distance>("km");
 
-  const [massType1, setMassType1] = useState<Mass>("g");
-  const [massType2, setMassType2] = useState<Mass>("oz");
+  const [massType1, setMassType1] = useState<Mass>("kg");
+  const [massType2, setMassType2] = useState<Mass>("g");
 
   const [volumeType1, setVolumeType1] = useState<Volume>("L");
-  const [volumeType2, setVolumeType2] = useState<Volume>("gal");
+  const [volumeType2, setVolumeType2] = useState<Volume>("mL");
+
+  const [temperatureType1, setTemperatureType1] = useState<Temperature>("C");
+  const [temperatureType2, setTemperatureType2] = useState<Temperature>("K");
 
   return (
     <div className={styles.app} data-theme={t.theme}>
@@ -52,6 +59,15 @@ const App = (): JSX.Element => {
           setType2={setVolumeType2}
           converter={convert.volume}
           options={volumes}
+        />
+
+        <Converter
+          type1={temperatureType1}
+          type2={temperatureType2}
+          setType1={setTemperatureType1}
+          setType2={setTemperatureType2}
+          converter={convert.temperature}
+          options={temperatures}
         />
       </Stack>
     </div>

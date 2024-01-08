@@ -1,5 +1,4 @@
 import { useCallback, useState } from "react";
-import { Distance } from "../../utils/unitConversion/distance/type";
 import stringToNum from "../../utils/stringToNum";
 import { Converter as ConverterFunc } from "../../utils/unitConversion/convert";
 import Row from "../Row";
@@ -7,10 +6,9 @@ import Stack from "../Stack";
 import Dropdown from "../Dropdown/Dropdown";
 import Input from "../Input/Input";
 import unitToLabel from "../../utils/unitConversion/unitToLabel";
-import { Mass } from "../../utils/unitConversion/mass/type";
-import { Volume } from "../../utils/unitConversion/volume/type";
+import { UnitType } from "../../utils/unitConversion/types";
 
-interface Props<T extends Distance | Mass | Volume> {
+interface Props<T extends UnitType> {
   type1: T;
   type2: T;
   setType1: (t: T) => void;
@@ -19,9 +17,7 @@ interface Props<T extends Distance | Mass | Volume> {
   options: readonly T[];
 }
 
-const Converter = <T extends Distance | Mass | Volume>(
-  props: Props<T>,
-): JSX.Element => {
+const Converter = <T extends UnitType>(props: Props<T>): JSX.Element => {
   const [units1, setUnits1] = useState<string>("1");
   const [units2, setUnits2] = useState<string>(
     (() => {

@@ -14,6 +14,11 @@ import milligrams from "./mass/milligrams";
 import ounces from "./mass/ounces";
 import pounds from "./mass/pounds";
 import { Mass } from "./mass/type";
+import celsius from "./temperature/celsius";
+import fahrenheit from "./temperature/fahrenheit";
+import kelvin from "./temperature/kelvin";
+import { Temperature } from "./temperature/type";
+import { UnitType } from "./types";
 import floridOunces from "./volume/floridOunces";
 import gallons from "./volume/gallons";
 import liters from "./volume/liters";
@@ -22,7 +27,7 @@ import pints from "./volume/pints";
 import quarts from "./volume/quarts";
 import { Volume } from "./volume/type";
 
-export type Converter<T extends Distance | Mass | Volume> = (unit: number) => {
+export type Converter<T extends UnitType> = (unit: number) => {
   to: (type: T) => number;
 };
 
@@ -30,7 +35,8 @@ export type Convert = {
   distance: Record<Distance, Converter<Distance>>;
   mass: Record<Mass, Converter<Mass>>;
   volume: Record<Volume, Converter<Volume>>;
-}
+  temperature: Record<Temperature, Converter<Temperature>>;
+};
 
 const convert: Convert = {
   distance: {
@@ -58,6 +64,11 @@ const convert: Convert = {
     pt: pints,
     qt: quarts,
     gal: gallons,
+  },
+  temperature: {
+    C: celsius,
+    F: fahrenheit,
+    K: kelvin,
   },
 };
 
