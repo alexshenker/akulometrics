@@ -5,11 +5,11 @@ const floridOunces: Converter<Volume> = (units: number) => ({
   to: (to: Volume) => {
     switch (to) {
       case "mL":
-        return units;
+        return units * 29.5735;
       case "L":
         return units / 1000;
       case "fl oz":
-        return units / 29.5735;
+        return units;
       case "pt":
         return units / 473.176;
       case "qt":
