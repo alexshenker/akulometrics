@@ -30,46 +30,48 @@ const App = (): JSX.Element => {
   const [temperatureType2, setTemperatureType2] = useState<Temperature>("K");
 
   return (
-    <div className={styles.app} data-theme={t.theme}>
-      <Header />
+    <div className={"body"} data-theme={t.theme}>
+      <div className={styles.app}>
+        <Header />
 
-      <Stack gap="20px" alignItems="center" marginTop="calc(30vh - 100px)">
-        <Converter
-          type1={distanceType1}
-          type2={distanceType2}
-          setType1={setDistanceType1}
-          setType2={setDistanceType2}
-          converter={convert.distance}
-          options={distances}
-        />
+        <Stack gap="20px" alignItems="center" marginTop="calc(25vh - 100px)">
+          <Converter
+            type1={distanceType1}
+            type2={distanceType2}
+            setType1={setDistanceType1}
+            setType2={setDistanceType2}
+            converter={convert.distance}
+            options={distances}
+          />
 
-        <Converter
-          type1={massType1}
-          type2={massType2}
-          setType1={setMassType1}
-          setType2={setMassType2}
-          converter={convert.mass}
-          options={masses}
-        />
+          <Converter
+            type1={massType1}
+            type2={massType2}
+            setType1={setMassType1}
+            setType2={setMassType2}
+            converter={convert.mass}
+            options={masses}
+          />
 
-        <Converter
-          type1={volumeType1}
-          type2={volumeType2}
-          setType1={setVolumeType1}
-          setType2={setVolumeType2}
-          converter={convert.volume}
-          options={volumes}
-        />
+          <Converter
+            type1={volumeType1}
+            type2={volumeType2}
+            setType1={setVolumeType1}
+            setType2={setVolumeType2}
+            converter={convert.volume}
+            options={volumes}
+          />
 
-        <Converter
-          type1={temperatureType1}
-          type2={temperatureType2}
-          setType1={setTemperatureType1}
-          setType2={setTemperatureType2}
-          converter={convert.temperature}
-          options={temperatures}
-        />
-      </Stack>
+          <Converter
+            type1={temperatureType1}
+            type2={temperatureType2}
+            setType1={setTemperatureType1}
+            setType2={setTemperatureType2}
+            converter={convert.temperature}
+            options={temperatures}
+          />
+        </Stack>
+      </div>
     </div>
   );
 };

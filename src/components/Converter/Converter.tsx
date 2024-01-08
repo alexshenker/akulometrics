@@ -7,6 +7,7 @@ import Dropdown from "../Dropdown/Dropdown";
 import Input from "../Input/Input";
 import unitToLabel from "../../utils/unitConversion/unitToLabel";
 import { UnitType } from "../../utils/unitConversion/types";
+import styles from "./Converter.module.css";
 
 interface Props<T extends UnitType> {
   type1: T;
@@ -110,7 +111,7 @@ const Converter = <T extends UnitType>(props: Props<T>): JSX.Element => {
   );
 
   return (
-    <div style={{ width: "300px" }}>
+    <div className={styles.converter}>
       <Row justifyContent="space-between" gap="14px">
         <Stack gap="5px">
           <Dropdown
