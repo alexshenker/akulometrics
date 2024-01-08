@@ -4,6 +4,5 @@
   border: var(--input-border);
   border-radius: var(--input-border-radius);
   width: 100%;
-  max-width: var(--input-max-width);
   box-sizing: border-box;
 }

@@ -10,6 +10,7 @@ const Header = (): JSX.Element => {
   return (
     <div className={styles.header}>
       <span>
+        <img src="/images/logo.png" alt="logo" width="32px" height="23px" />{" "}
         <strong>AkuloMetrics</strong> - by Aleksey Shenker{" | "}
         <a href="https://github.com/alexshenker/akulometrics">Github</a>
       </span>

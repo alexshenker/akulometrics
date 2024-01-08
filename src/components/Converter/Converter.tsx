@@ -9,6 +9,7 @@ import Input from "../Input/Input";
 import unitToLabel from "../../utils/unitConversion/unitToLabel";
 import { Mass } from "../../utils/unitConversion/mass/type";
 import { Volume } from "../../utils/unitConversion/volume/type";
+import styles from "./Converter.module.css";
 
 interface Props<T extends Distance | Mass | Volume> {
   type1: T;
@@ -114,7 +115,7 @@ const Converter = <T extends Distance | Mass | Volume>(
   );
 
   return (
-    <div style={{ width: "300px" }}>
+    <div className={styles.converter}>
       <Row justifyContent="space-between" gap="14px">
         <Stack gap="5px">
           <Dropdown

@@ -1,15 +1,16 @@
 /* Palette */
 :root {
-  --z-100: #f4f4f5;
+  --z-min: #f8fafc;
+  --z-100: #e4e4e7;
   --z-200: #d4d4d8;
   --z-300: #a1a1aa;
   --z-neutral: #71717a;
   --z-400: #52525b;
   --z-500: #3f3f46;
   --z-600: #171717;
+  --z-max: #09090b;
 
   --input-border: 1px solid var(--border);
-  --input-max-width: 150px;
   --input-border-radius: 4px;
 }
 
@@ -20,6 +21,7 @@
 
 /* Light-theme */
 :root {
+  --base: var(--z-min);
   --background: var(--z-100);
   --text: var(--z-600);
   --icon: var(--z-600);
@@ -28,6 +30,7 @@
 }
 
 [data-theme="dark"] {
+  --base: var(--z-max);
   --background: var(--z-600);
   --text: var(--z-100);
   --icon: var(--z-100);
@@ -37,7 +40,11 @@
 
 body {
   margin: 0;
+}
+
+.body {
   font-size: 18px;
+  background-color: var(--base);
 }
 
 a {
