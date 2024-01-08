@@ -15,7 +15,7 @@ const grams: Converter<Mass> = (units: number) => ({
       case "lb":
         return units / 453.592;
       case "t (metric)":
-        return units / (1000 / 1000);
+        return units / (1000 * 1000);
       default: {
         const x: never = to;
         throw new Error(`Unexpected value ${x}`);
