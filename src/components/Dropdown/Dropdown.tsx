@@ -23,8 +23,9 @@ const Dropdown = <T extends Option>(props: Props<T>): JSX.Element => {
       </div>
 
       {showMenu && (
-        <>
-          <Space height={"3px"} />
+        <div className={styles.menuContainer}>
+          <Space height="3px" />
+
           <div className={styles.menu}>
             {props.options.length === 0 && (
               <div className={styles.option}>Empty</div>
@@ -45,7 +46,7 @@ const Dropdown = <T extends Option>(props: Props<T>): JSX.Element => {
               );
             })}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

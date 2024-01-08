@@ -13,11 +13,15 @@
   background-color: var(--surface);
 }
 
-.menu {
+.menuContainer {
   position: absolute;
   box-sizing: border-box;
-  border: var(--input-border);
   width: 100%;
+  z-index: 999;
+}
+
+.menu {
+  border: var(--input-border);
   border-radius: var(--input-border-radius);
   background-color: var(--surface);
 }
