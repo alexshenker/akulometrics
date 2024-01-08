@@ -1,5 +1,5 @@
-import express from "express";
-import path from "path";
+const express = require("express");
+const path = require("path");
 
 //https://medium.com/captainme-ai/deploying-migrating-static-create-react-app-project-to-heroku-22-stack-b19a4255ea7c
 

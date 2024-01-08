@@ -1,1 +1,1 @@
-web: node server/serve_app.ts
+web: node script/heroku-start.js
