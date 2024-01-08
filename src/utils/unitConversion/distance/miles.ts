@@ -11,7 +11,7 @@ const miles: Converter<Distance> = (units: number) => ({
       case "m":
         return units * 1609.344;
       case "km":
-        return units * 1.60934;
+        return units * 1.609344;
       case "in":
         return units * 63360;
       case "ft":

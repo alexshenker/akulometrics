@@ -19,7 +19,7 @@ const kilometers: Converter<Distance> = (units: number) => ({
       case "yd":
         return units * 1093.61;
       case "mi":
-        return units / 1.60934;
+        return units / 1.609344;
       default: {
         const x: never = to;
         throw new Error(`Unexpected value ${x}`);
