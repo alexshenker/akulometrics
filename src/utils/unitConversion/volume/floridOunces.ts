@@ -7,15 +7,15 @@ const floridOunces: Converter<Volume> = (units: number) => ({
       case "mL":
         return units * 29.5735;
       case "L":
-        return units / 1000;
+        return units / 33.814;
       case "fl oz":
         return units;
       case "pt":
-        return units / 473.176;
+        return units / 16;
       case "qt":
-        return units / 946.353;
+        return units / 32;
       case "gal":
-        return units / 3785.41;
+        return units / 128;
       default: {
         const x: never = to;
         throw new Error(`Unexpected value ${x}`);
